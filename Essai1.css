@@ -1,0 +1,52 @@
+#menu-toggle {
+    display: none;
+  }
+  
+  /* Icône du menu burger */
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Menu caché par défaut */
+  .menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Media query pour afficher le menu burger en mode mobile */
+  @media (max-width: 414px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .menu li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  
+    /* Afficher le menu si la case est cochée */
+    #menu-toggle:checked + .menu {
+      display: flex;
+    }
+  }
